@@ -16,3 +16,7 @@ npm i nodemon -D
 ```
 
 ### use
+
+```bash
+npm run start
+```

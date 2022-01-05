@@ -2,6 +2,7 @@ require('./models/db');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const expressHandlebars = require('express-handlebars');
 
 const taskController = require('./controller/taskController');
 
@@ -13,12 +14,13 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-app.set('views', path.join(__dirname, '/views'))
+app.set('views', path.join(__dirname, '/views/'))
 
-app.engine('hbs',exressHandlebars({
+// TypeError: expressHandlebars is not a function => expressHandlebars => expressHandlebars.engine
+app.engine('hbs', expressHandlebars.engine({
     extname : 'hbs',
     defaultLayout : 'mainLayout',
-    layoutDir : __dirname + '/views'
+    layoutsDir : __dirname + '/views/'
 }))
 
 app.set('view engine', 'hbs');
