@@ -84,7 +84,9 @@ router.get('/list', (req,res) => {
     })
 })
 
-// --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
+
+// this > ReferenceError: params is not defined
 
 // router.get('/:id', (req,res) => {
 //     Task.findById(req,params.id, (err,doc) => {
@@ -92,7 +94,7 @@ router.get('/list', (req,res) => {
             
 //             res.render("addOrEdit", {
 //                 viewTitle : "update Task",
-//                 task : doc
+//                 task : doc._doc
 //             })
 //         }
 //     })
@@ -103,13 +105,14 @@ router.get('/:id', function(req,res) {
         if(!err){
             res.render("addOrEdit" , {
                 viewTitle : "Update Task",
+                // fix show data from mongoDB > doc > doc._doc
                 task : doc._doc
             })
         }
     });
 })
 
-// --------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------
 
 router.get('/delete/:id', (req,res) => {
     Task.findByIdAndRemove(req.params.id, (err, doc) => {
