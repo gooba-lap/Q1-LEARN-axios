@@ -19,14 +19,13 @@
                 <td>{{this.description}}</td>
 
                 <td>
-                    <a href="/{{this.id}}">
+                    <a class="btn btn-success" href="/{{this._id}}">
                         Update
                     </a>
-                    <a href="/delete/{{this.id}}" onclick="return confirm('Are you sure to delete this record?');"
+                    <a class="btn btn-danger" href="/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">
                         Delete
-                    
-                        </i>
-                    ></a>
+                    </a>
+
                 </td>
             </tr>
         {{/each}}

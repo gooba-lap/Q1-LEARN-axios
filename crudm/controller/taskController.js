@@ -18,7 +18,7 @@ router.post("/", (req,res) => {
         insertRecord(req,res);
     }
     else {
-        updateRecoed(req,res);
+        updateRecord(req,res);
     }
 })
 
@@ -75,6 +75,8 @@ router.get('/list', (req,res) => {
 
     Task.find((err,docs) => {
         if(!err) {
+            docs = docs.map(item => item.toObject())
+
             res.render("list", {
                 list:docs
             })
@@ -82,16 +84,32 @@ router.get('/list', (req,res) => {
     })
 })
 
-router.get('/:id', (req,res) => {
-    Task.findById(req,params.id, (err,doc) => {
+// --------------------------------------------------------------------------------
+
+// router.get('/:id', (req,res) => {
+//     Task.findById(req,params.id, (err,doc) => {
+//         if(!err){
+            
+//             res.render("addOrEdit", {
+//                 viewTitle : "update Task",
+//                 task : doc
+//             })
+//         }
+//     })
+// })
+
+router.get('/:id', function(req,res) {
+    Task.findById(req.params.id, async (err,doc) => {
         if(!err){
-            res.render("addOrEdit", {
-                viewTitle : "update Task",
-                task : doc
+            res.render("addOrEdit" , {
+                viewTitle : "Update Task",
+                task : doc._doc
             })
         }
-    })
+    });
 })
+
+// --------------------------------------------------------------------------------
 
 router.get('/delete/:id', (req,res) => {
     Task.findByIdAndRemove(req.params.id, (err, doc) => {
