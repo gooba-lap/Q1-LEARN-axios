@@ -11,6 +11,8 @@ npx create-react-app crud-operation
 npm install semantic-ui-react semantic-ui-css
 
 npm i axios
+
+npm i react-router-dom
 ```
 
 
@@ -19,3 +21,6 @@ npm i axios
 ### Unable to resolve module `semantic-ui-css/semantic.css
 https://github.com/Semantic-Org/Semantic-UI-React/issues/3738
 > yarn add semantic-ui-css 
+
+### Error "Error: A <Route> is only ever to be used as the child of <Routes> element"
+https://stackoverflow.com/questions/69832748/error-error-a-route-is-only-ever-to-be-used-as-the-child-of-routes-element
