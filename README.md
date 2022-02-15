@@ -6,6 +6,10 @@
 |--------------------|--------------------|
 | wait        | wait            |
 
+
+<br /><br />
+
+
 # P1-T-Dipesh-Malvia
 ### React Axios CRUD with JSON SERVER | ReactJS Axios REST API | React Tutorials for Beginners
 > https://www.youtube.com/watch?v=59z1_3-vTOk&t=1213s
@@ -14,5 +18,5 @@
 |--------------------|--------------------|
 |![list]             | ![add]             |
 
-[list]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/P1-T-Salvando-el-semestre/list.png
-[add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/P1-T-Salvando-el-semestre/add.png
+[list]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Salvando-el-semestre/list.png
+[add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Salvando-el-semestre/add.png
