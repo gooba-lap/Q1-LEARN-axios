@@ -15,10 +15,12 @@ function App() {
           <h3>React Crud Operations</h3>
         </div>        
 
+        {/* <Create/> */}
+
         <div style={{ marginTop: 20 }}>
           <Routes>
-            <Route path='/' element={<Create />} />
-            <Route path='/read' element={<Read />} />
+            <Route exact path='/' element={<Create />} />
+            <Route exact path='/read' element={<Read />} />
             <Route path='/update' element={<Update />} />
           </Routes>
         </div>

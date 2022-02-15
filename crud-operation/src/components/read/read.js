@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { Table, Button } from 'semantic-ui-react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Read() {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://6209db5f92946600171c554d.mockapi.io/Crud`)
+        axios.get(`https://jsonplaceholder.typicode.com/users`)
         .then((getData) => {
             setApiData(getData.data);
         })
-    })
+    }, [])
 
+    const setData = (id,name,username) => {
+        console.log(id);
+        localStorage.setItem('id', id)
+        localStorage.setItem('name',name)
+        localStorage.setItem('username',username)
+    }
     return (
         <div>
             <Table celled>
@@ -30,13 +37,17 @@ export default function Read() {
                         return (
                             <Table.Row>
                                 <Table.Cell>{data.id}</Table.Cell>
-                                <Table.Cell>{data.firstName}</Table.Cell>
-                                <Table.Cell>{data.lastName}</Table.Cell>
+                                <Table.Cell>{data.name}</Table.Cell>
+                                <Table.Cell>{data.username}</Table.Cell>
                                 <Table.Cell>
-                                    <Button color="green">Update</Button>    
+                                    <Link to = '/update'>
+                                        <Button color="green" onClick={() => setData(data.id,data.name,data.username)}>Update</Button>    
+                                    </Link>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Button color="red">Delete</Button>    
+                                    <Link to = '/delete'>
+                                        <Button color="red">Delete</Button>    
+                                    </Link>
                                 </Table.Cell>
                             </Table.Row>
                         )

@@ -24,3 +24,4 @@ https://github.com/Semantic-Org/Semantic-UI-React/issues/3738
 
 ### Error "Error: A <Route> is only ever to be used as the child of <Routes> element"
 https://stackoverflow.com/questions/69832748/error-error-a-route-is-only-ever-to-be-used-as-the-child-of-routes-element
+> route v.5 chang to route v.6
