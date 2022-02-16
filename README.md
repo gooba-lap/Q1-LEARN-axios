@@ -7,11 +7,13 @@
 
 | read               | add                |  update            |
 |--------------------|--------------------|--------------------|
-![Cy-read]           | ![Cy-add]          | ![Cy-update]       |
+| ![Cy-read]         | ![Cy-add]          | ![Cy-update]       |
 
-read   > http://localhost:3006/read
-add    > http://localhost:3006
-update > http://localhost:3006/update
+| Page      | Route                         |
+|---        |---                            |
+| read      | http://localhost:3006/read    |
+| add       | http://localhost:3006         |
+| update    | http://localhost:3006/update  |
 
 [Cy-read]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/read.png
 [Cy-add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/add.png
