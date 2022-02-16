@@ -2,13 +2,12 @@
 ### Let's perform CRUD Operations with React and Axios - Tutorial for Beginners
 > https://www.youtube.com/watch?v=-ZMP8ZladIQ
 
-| read               |
-|--------------------|
-| ![Cy-read]         |
 
-| List               |  add               |
-|--------------------|--------------------|
-| ![Cy-add]          | ![Cy-update]       |
+| read                         | add                         |  update                      |
+|--------------------          |--------------------         |--------------------          |
+| http://localhost:3006/read   | http://localhost:3006       | http://localhost:3006/update |
+![Cy-read]                     | ![Cy-add]                   | ![Cy-update]                 |
+
 
 [Cy-read]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/read.png
 [Cy-add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/add.png
