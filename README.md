@@ -2,12 +2,20 @@
 ### Let's perform CRUD Operations with React and Axios - Tutorial for Beginners
 > https://www.youtube.com/watch?v=-ZMP8ZladIQ
 
+| read               |
+|--------------------|
+| ![Cy-read]         |
+
 | List               |  add               |
 |--------------------|--------------------|
-| wait        | wait            |
+| ![Cy-add]          | ![Cy-update]       |
 
+[Cy-read]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/read.png
+[Cy-add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/add.png
+[Cy-update]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Cybernatico/update.png
+ 
 
-<br /><br />
+<br />
 
 
 # P1-T-Dipesh-Malvia
@@ -16,7 +24,7 @@
 
 | List               |  add               |
 |--------------------|--------------------|
-|![list]             | ![add]             |
+|![Sa-list]          | ![Sa-add]          |
 
-[list]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Salvando-el-semestre/list.png
-[add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Salvando-el-semestre/add.png
+[Sa-list]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Salvando-el-semestre/list.png
+[Sa-add]: https://github.com/gooba-lap/Q1-LEARN-axios/blob/main/P1-T-Salvando-el-semestre/add.png
