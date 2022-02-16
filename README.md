@@ -5,9 +5,13 @@
 ### Probelm
 > route respontive not good
 
-| read               | add                |  update            |
-|--------------------|--------------------|--------------------|
-| ![Cy-read]         | ![Cy-add]          | ![Cy-update]       |
+| read       |      |
+|---         |---   |
+| ![Cy-read] |      |
+
+| add                |  update            |
+|--------------------|--------------------|
+| ![Cy-add]          | ![Cy-update]       |
 
 | Page      | Route                         |
 |---        |---                            |
