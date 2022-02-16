@@ -8,6 +8,7 @@ import Update from './components/update/update';
 function App() {
   return (
     <Router>
+      
 
       <div className="main">
 
@@ -27,7 +28,7 @@ function App() {
 
       </div>
 
-  </Router>
+    </Router>
   );
 }
 

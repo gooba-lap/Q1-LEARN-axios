@@ -10,7 +10,8 @@ export default function Create() {
     console.log(lastName);
 
     const sendDataToAPI = () => {
-        axios.post(`https://6209db5f92946600171c554d.mockapi.io/Crud`, {
+        // old > https://6209db5f92946600171c554d.mockapi.io/Crud
+        axios.post(`http://localhost:3007/contacts`, {
             firstName,
             lastName
         })
@@ -19,12 +20,14 @@ export default function Create() {
     return (
         <div>
             <Form>
+
                 <Form.Field>
                     <label>First Name</label>
                     <input name="fname" 
                     onChange={(e) => setFirstName(e.target.value)}
                     placeholder='First Name' />
                 </Form.Field>
+
                 <Form.Field>
                     <label>Last Name</label>
                     <input name="lname" 
@@ -32,7 +35,9 @@ export default function Create() {
                     placeholder='Last Name' />
                 </Form.Field>
                 
-                <Button type='submit' onClick={sendDataToAPI}>Submit</Button>
+                <Button type='submit' color="green" href="/read" onClick={sendDataToAPI}>Submit</Button>
+                <Button type='submit' color="brown" href="/read">View list</Button>
+
             </Form>
         </div>
     )

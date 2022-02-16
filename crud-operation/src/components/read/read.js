@@ -7,20 +7,39 @@ export default function Read() {
     const [apiData, setApiData] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/users`)
+        axios.get(`http://localhost:3007/contacts`)
         .then((getData) => {
             setApiData(getData.data);
         })
     }, [])
 
-    const setData = (id,name,username) => {
+    const setData = (id,firstName,lastName) => {
         console.log(id);
         localStorage.setItem('id', id)
-        localStorage.setItem('name',name)
-        localStorage.setItem('username',username)
+        localStorage.setItem('firstName',firstName)
+        localStorage.setItem('lastName',lastName)
     }
+
+    // detele
+
+    const getData = () => {
+        axios.get(`http://localhost:3007/contacts/`)
+            .then((getData) => {
+                setApiData(getData.data);
+            })
+    }
+
+    const onDelete = (id) => {
+        axios.delete(`http://localhost:3007/contacts/${id}`)
+        .get(() => {
+            getData();
+        })
+    }
+
     return (
         <div>
+            <Button type='submit' color="twitter" href="/">New</Button>
+
             <Table celled>
                 <Table.Header>
                     <Table.Row>
@@ -37,16 +56,16 @@ export default function Read() {
                         return (
                             <Table.Row>
                                 <Table.Cell>{data.id}</Table.Cell>
-                                <Table.Cell>{data.name}</Table.Cell>
-                                <Table.Cell>{data.username}</Table.Cell>
+                                <Table.Cell>{data.firstName}</Table.Cell>
+                                <Table.Cell>{data.lastName}</Table.Cell>
                                 <Table.Cell>
                                     <Link to = '/update'>
-                                        <Button color="green" onClick={() => setData(data.id,data.name,data.username)}>Update</Button>    
+                                        <Button color="green" onClick={() => setData(data.id,data.firstName,data.lastName)}>Update</Button>    
                                     </Link>
                                 </Table.Cell>
                                 <Table.Cell>
-                                    <Link to = '/delete'>
-                                        <Button color="red">Delete</Button>    
+                                    <Link to = '/read'>
+                                        <Button color="red" onClick={() => onDelete(data.id)}>Delete</Button>    
                                     </Link>
                                 </Table.Cell>
                             </Table.Row>
